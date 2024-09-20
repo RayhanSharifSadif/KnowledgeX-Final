@@ -1,0 +1,26 @@
+<%- include("header") %>
+
+<h1>Upload Question for <%= course_code %></h1>
+
+<form action="/submit_question/<%= course_code %>" method="POST" enctype="multipart/form-data">
+  <div>
+    <label for="question_name">Question Name:</label>
+    <input type="text" id="question_name" name="question_name" required>
+  </div>
+
+  <div>
+    <label for="question_file">Upload Question File:</label>
+    <input type="file" id="question_file" name="question_file" accept=".pdf,.doc,.docx" required>
+  </div>
+
+  <button type="submit">Submit Question</button>
+</form>
+
+<<<<<<< HEAD
+=======
+<form action="/view_questions/<%= course_code %>" method="GET">
+    <button type="submit">View Questions</button>
+  </form>
+>>>>>>> 7ff763f58de684c2f1f62747134a05d92ee3ba89
+  
+<%- include("footer") %>

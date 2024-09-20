@@ -1,0 +1,82 @@
+<%- include('header') %>
+<<<<<<< HEAD
+
+<div class="container mt-5" style="max-width: 600px; margin: 0 auto;">
+  <h1 style="text-align: center; font-size: 2.5em; color: #333; margin-bottom: 30px;">Register</h1>
+
+  <div class="row">
+    <div class="col-sm-8" style="margin: 0 auto;">
+      <div class="card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <div class="card-body" style="padding: 30px;">
+
+          <!-- Makes POST request to /register route -->
+          <form action="/register" method="POST">
+            <div class="form-group" style="margin-bottom: 20px;">
+              <label for="email" style="font-weight: bold; font-size: 1.2em;">Email</label>
+              <input type="email" class="form-control" name="email" style="padding: 10px; font-size: 1.1em;">
+            </div>
+            <div class="form-group" style="margin-bottom: 20px;">
+              <label for="password" style="font-weight: bold; font-size: 1.2em;">Password</label>
+              <input type="password" class="form-control" name="password" style="padding: 10px; font-size: 1.1em;">
+            </div>
+            <div class="form-group" style="margin-bottom: 20px;">
+              <label for="name" style="font-weight: bold; font-size: 1.2em;">Name</label>
+              <input type="text" class="form-control" name="name" style="padding: 10px; font-size: 1.1em;">
+            </div>
+            <button type="submit" class="btn btn-dark" style="width: 100%; padding: 12px; font-size: 1.1em; background-color: #4CAF50; border: none; border-radius: 5px; cursor: pointer;">
+              Register
+            </button>
+=======
+<div class="container mt-5">
+  <h1>Register</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /register route -->
+          <form action="/register" method="POST">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <button type="submit" class="btn btn-dark">Register</button>
+>>>>>>> 7ff763f58de684c2f1f62747134a05d92ee3ba89
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+<<<<<<< HEAD
+
+=======
+    <!-- <div class="col-sm-4">
+      <div class="card social-block">
+        <div class="card-body">
+          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign Up with Google
+          </a>
+        </div>
+      </div>
+    </div> -->
+>>>>>>> 7ff763f58de684c2f1f62747134a05d92ee3ba89
+
+  </div>
+</div>
+
+<%- include('footer') %>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7ff763f58de684c2f1f62747134a05d92ee3ba89

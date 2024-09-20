@@ -1,0 +1,29 @@
+<%- include("header") %>
+
+<<<<<<< HEAD
+<h1 style="text-align: center; font-size: 2.5em; color: #333; margin-bottom: 20px;">All Submissions</h1>
+
+<ul style="list-style-type: none; padding: 0; max-width: 600px; margin: 0 auto; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+  <% answers.forEach(function(answer) { %>
+    <li style="padding: 15px; border-bottom: 1px solid #ddd;">
+      <strong style="color: #4CAF50;">Submission Name:</strong> <%= answer.answer_name %><br>
+      <a href="/<%= answer.file_path %>" download style="color: #2196F3; text-decoration: none; padding: 5px; border: 1px solid #2196F3; border-radius: 5px; transition: background-color 0.3s;">Download File</a><br>
+=======
+<h1>All Submissions</h1>
+
+<ul>
+  <% answers.forEach(function(answers) { %>
+    <li>
+      <strong>Submission Name:</strong> <%= answers.answer_name %><br>
+      <a href="/<%= answers.file_path %>" download>Download File</a><br>
+>>>>>>> 7ff763f58de684c2f1f62747134a05d92ee3ba89
+    </li>
+  <% }) %>
+</ul>
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7ff763f58de684c2f1f62747134a05d92ee3ba89
+<%- include("footer") %>

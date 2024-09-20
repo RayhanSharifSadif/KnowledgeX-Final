@@ -1,0 +1,14 @@
+<%- include("header") %>
+
+<h1 style="text-align: center; font-size: 2.5em; color: #333; margin-bottom: 20px;">All Questions</h1>
+
+<ul style="list-style-type: none; padding: 0; max-width: 600px; margin: 0 auto; background: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+  <% questions.forEach(function(question) { %>
+    <li style="padding: 15px; border-bottom: 1px solid #ddd;">
+      <strong style="color: #4CAF50;">Question Name:</strong> <%= question.question_name %><br>
+      <a href="/<%= question.file_path %>" download style="color: #2196F3; text-decoration: none; padding: 5px; border: 1px solid #2196F3; border-radius: 5px; transition: background-color 0.3s;">Download File</a><br>
+    </li>
+  <% }) %>
+</ul>
+
+<%- include("footer") %>

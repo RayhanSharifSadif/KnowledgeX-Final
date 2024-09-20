@@ -1,0 +1,108 @@
+<%- include("header") %>
+<nav class="navbar">
+  <div class="nav-left">
+    <a href="/first_page">Home</a>
+  </div>
+  <div class="nav-right">
+    <a href="/logout">Logout</a>
+  </div>
+</nav>
+<<<<<<< HEAD
+
+<div class="launch-button" style="text-align: center; margin: 20px 0;">
+  <button onclick="window.location.href='/add-course'" style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Launch a new course
+  </button>
+</div>
+
+<div class="Announcement" style="max-width: 500px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+  <form action="/announcement" method="POST">
+    <div>
+      <label for="announcement_text" style="font-weight: bold;">Announcement:</label><br>
+      <textarea id="announcement_text" name="announcement_text" required rows="2" placeholder="Enter your announcement here" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea><br>
+    </div>
+    <br>
+    <button type="submit" style="padding: 10px 15px; font-size: 16px; background-color: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Submit Announcement
+    </button>
+  </form>
+
+  <br>
+
+  <form action="/to_announcement" method="POST">
+    <button type="submit" style="padding: 10px 15px; font-size: 16px; background-color: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      View Announcement
+    </button>
+  </form>
+</div>
+
+
+    
+</div>
+
+  <!-- Heading for the user's courses -->
+  <div class="heading" style="font-weight: bold; font-size: 24px; margin: 20px 0;">
+    Courses Launched by You
+  </div>
+  
+=======
+<div class="launch-button">
+    <button onclick="window.location.href='/add-course'">Launch a new course</button>
+</div>
+
+  <div class="launch-button">
+    <form action="/announcement" method="POST">
+      <div>
+        <label for="announcement_text">Announcement:</label>
+        <textarea id="announcement_text" name="announcement_text" required rows="3" placeholder="Enter your announcement here"></textarea>
+      </div>
+      <button type="submit">Submit Announcement</button>
+    </form>
+
+    <form action="/to_announcement" method="POST">
+      <button type="submit">View Announcement</button>
+    </form>
+</div>
+
+  <!-- Heading for the user's courses -->
+  <div class="heading">Courses Launched by You</div>
+>>>>>>> 7ff763f58de684c2f1f62747134a05d92ee3ba89
+
+  <!-- Grid to display the courses -->
+  <div class="course-grid-container">
+    <% courses.forEach(function(course) { %>
+      <div class="course-card">
+        <div class="course-code"><%= course.code %></div>
+        <div class="course-name"><%= course.name %></div>
+        <form action="/course_details" method="POST">
+          <input type="hidden" name="courseCode" value="<%= course.code %>">
+          <button type="submit">view details</button>
+        </form>
+      </div>
+    <% }) %>
+  </div>
+<<<<<<< HEAD
+  
+
+    <div style="display: flex; justify-content: center; gap: 20px;">
+      <form action="/viewmyquestion" method="GET">
+        <button type="submit">View All Questions</button>
+      </form>
+      <form action="/submitted_answer" method="POST">
+        <button type="submit">View All Submissions</button>
+      </form>
+    </div>
+    
+    
+    
+
+=======
+  <div class="course-grid-container">
+  <form action="/submitted_answer" method="POST">
+    <button type="submit">Submissions</button>
+  </form>
+</div>
+  
+
+>>>>>>> 7ff763f58de684c2f1f62747134a05d92ee3ba89
+<%- include("footer") %>

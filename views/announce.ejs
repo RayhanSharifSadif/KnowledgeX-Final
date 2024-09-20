@@ -1,0 +1,45 @@
+<%- include("header") %>
+
+<<<<<<< HEAD
+<div class="container" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+  <hr>
+  <h2 style="text-align: center; color: #4CAF50; font-family: 'Arial', sans-serif;">Latest Announcements</h2>
+
+  <!-- Section to display announcements with scrollable container -->
+  <div style="max-height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; border-radius: 8px; background-color: #f9f9f9;">
+    <% if (announcements && announcements.length > 0) { %>
+      <% announcements.forEach(function(announcement) { %>
+        <div style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+          <p style="font-size: 22px; font-weight: bold; color: #333; margin-bottom: 5px;">
+            <%= announcement.announcement_text %>
+          </p>
+          <p style="font-size: 16px; color: #999;">
+            <small>Posted on <%= announcement.formatted_date %></small>
+          </p>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p style="font-size: 16px; color: #888; text-align: center;">No announcements yet. Be the first to post!</p>
+=======
+<div class="container">
+  <hr>
+  <h2>Latest Announcements</h2>
+
+  <!-- Section to display announcements -->
+  <div>
+    <% if (announcements && announcements.length > 0) { %>
+      <% announcements.forEach(function(announcement) { %>
+        <div>
+          <p><strong><%= announcement.announcement_text %></strong></p>
+          <p><small>Posted on <%= announcement.formatted_date %></small></p>
+        </div>
+        <hr>
+      <% }); %>
+    <% } else { %>
+      <p>No announcements yet. Be the first to post!</p>
+>>>>>>> 7ff763f58de684c2f1f62747134a05d92ee3ba89
+    <% } %>
+  </div>
+</div>
+
+<%- include("footer") %>
